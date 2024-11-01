@@ -1,4 +1,4 @@
-# Netflix Movies and TV Shows Data Analysis using SQL
+# Netflix Data Analysis SQL project 
 
 
 ## Overview
@@ -267,7 +267,7 @@ This analysis provides a comprehensive view of Netflix's content and can help in
 
 
 
-## Author – Babul Sarker 
+## Author √ê Babul Sarker 
 
 This project is part of my portfolio, showcasing the SQL skills essential for data analyst roles. If you have any questions, feedback, or would like to collaborate, feel free to get in touch!
 
