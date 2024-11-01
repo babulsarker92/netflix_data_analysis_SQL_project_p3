@@ -6,10 +6,12 @@ This project focuses on a detailed analysis of Netflix's movie and TV show data 
 
 ## Objectives
 
-- Analyze the distribution of content types (movies vs TV shows).
-- Identify the most common ratings for movies and TV shows.
-- List and analyze content based on release years, countries, and durations.
-- Explore and categorize content based on specific criteria and keywords.
+- Examine the distribution between content types, specifically movies versus TV shows.
+- Identify and analyze the most common ratings across both movies and TV shows.
+- Analyze content distribution by release year to identify trends over time.
+- Evaluate the distribution of content by country to understand regional representation.
+- Review and categorize content durations, including average lengths for movies and series.
+- Explore and classify content based on specific keywords and criteria for targeted insights.
 
 ## Dataset
 
