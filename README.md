@@ -42,7 +42,7 @@ CREATE TABLE netflix
 
 ## Business Problems and Solutions
 
-### Problem 1.How many Movies and TV Shows are there in total?
+### Problem 1. How many Movies and TV Shows are there in total?
 
 ```sql
 SELECT
@@ -53,7 +53,7 @@ GROUP BY type;
 ```
 **Purpose/Objective:** Determine the distribution of content types on Netflix.
 
-### Problem 2.What is the most frequently occurring rating among movies and TV shows?
+### Problem 2. What is the most frequently occurring rating among movies and TV shows?
 
 ```sql
 WITH RatingRanks AS (
