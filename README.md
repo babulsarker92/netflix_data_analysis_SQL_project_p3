@@ -1,4 +1,4 @@
-# Netflix Data Analysis SQL project 
+# Netflix Data Analysis project using SQL 
 
 ## Overview
 
@@ -19,7 +19,7 @@ The data for this project is sourced from the Kaggle dataset:
 
 - **Dataset Link:** [Movies Dataset](https://www.kaggle.com/datasets/shivamb/netflix-shows?resource=download)
 
-## Schema
+## Schemas of Netflix data analysis project 
 
 ```sql
 DROP TABLE IF EXISTS netflix;
@@ -40,7 +40,7 @@ CREATE TABLE netflix
 );
 ```
 
-## Business Problems and Solutions
+##  Some Business Problems and their Solutions
 
 ### Problem 1. How many Movies and TV Shows are there in total?
 
