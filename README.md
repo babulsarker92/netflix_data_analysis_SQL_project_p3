@@ -42,45 +42,39 @@ CREATE TABLE netflix
 
 ## Business Problems and Solutions
 
-### 1. Count the Number of Movies vs TV Shows
+### Problem 1.How many Movies and TV Shows are there in total?
 
 ```sql
-SELECT 
+SELECT
     type,
-    COUNT(*)
-FROM netflix
-GROUP BY 1;
+	COUNT(*) AS total_content
+FROM netflix_database
+GROUP BY type;
 ```
+**Purpose/Objective:** Determine the distribution of content types on Netflix.
 
-**Objective:** Determine the distribution of content types on Netflix.
-
-### 2. Find the Most Common Rating for Movies and TV Shows
+### Problem 2.What is the most frequently occurring rating among movies and TV shows?
 
 ```sql
-WITH RatingCounts AS (
-    SELECT 
-        type,
-        rating,
-        COUNT(*) AS rating_count
-    FROM netflix
-    GROUP BY type, rating
-),
-RankedRatings AS (
-    SELECT 
-        type,
-        rating,
-        rating_count,
-        RANK() OVER (PARTITION BY type ORDER BY rating_count DESC) AS rank
-    FROM RatingCounts
+WITH RatingRanks AS (
+   SELECT
+         type,
+         rating,
+         COUNT(*) AS count,    --This count tells us how many times each rating appears for each type (Movie or TV Show)         
+		 RANK() OVER(PARTITION BY type ORDER BY COUNT(*) DESC) AS ranking   --RANK() is a window function that assigns a ranking number based on the order specified in the ORDER BY clause. PARTITION BY type means that the ranking calculation is done separately for each type (Movies and TV Shows are ranked separately).
+   FROM netflix_database                                                   --ORDER BY COUNT(*) DESC ranks the ratings by their counts in descending order, with the most common rating for each type receiving a rank of 1.
+   GROUP BY type, rating
 )
-SELECT 
-    type,
-    rating AS most_frequent_rating
-FROM RankedRatings
-WHERE rank = 1;
-```
 
+SELECT
+   type,
+   rating
+FROM RatingRanks   -- RatingRanks is Temporary Data set is made by using CTE
+WHERE ranking = 1;
+```
 **Objective:** Identify the most frequently occurring rating for each type of content.
+
+
 
 ### 3. List All Movies Released in a Specific Year (e.g., 2020)
 
