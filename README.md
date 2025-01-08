@@ -89,18 +89,13 @@ release_year = 2021
 ### Problem 4. What are the leading 10 countries for the largest Netflix content collections?
 
 ```sql
-SELECT * 
-FROM
-(
-    SELECT 
-        UNNEST(STRING_TO_ARRAY(country, ',')) AS country,
-        COUNT(*) AS total_content
-    FROM netflix
-    GROUP BY 1
-) AS t1
-WHERE country IS NOT NULL
-ORDER BY total_content DESC
-LIMIT 5;
+SELECT
+    UNNEST(STRING_TO_ARRAY(country,',')) AS new_country,  -- STRING_TO_ARRAY Function is to split a string into an array based on a specified delimiter
+	COUNT(show_id) AS total_content                     -- UNNEST Function split an array into ROWS--
+ FROM netflix_database
+ GROUP BY 1
+ORDER BY 2 DESC
+LIMIT 10;
 ```
 
 **Objective:** Identify the top 5 countries with the highest number of content items.
