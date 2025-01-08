@@ -103,11 +103,12 @@ LIMIT 10;
 ### Problem 5.Identify the film with the greatest screen time.
 
 ```sql
-SELECT 
-    *
-FROM netflix
-WHERE type = 'Movie'
-ORDER BY SPLIT_PART(duration, ' ', 1)::INT DESC;
+SELECT*FROM 
+ netflix_database
+ WHERE 
+    type='Movie'
+    AND
+    duration = (SELECT MAX(duration)  FROM netflix_database )
 ```
 
 **Objective:** Find the movie with the longest duration.
