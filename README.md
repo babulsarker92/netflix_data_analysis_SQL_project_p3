@@ -98,7 +98,7 @@ ORDER BY 2 DESC
 LIMIT 10;
 ```
 
-**Objective:** Identify the top 5 countries with the highest number of content items.
+**Objective:** Identify the leading 10 countries for the largest Netflix content collections.
 
 ### 5. Identify the Longest Movie
 
