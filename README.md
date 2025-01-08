@@ -111,8 +111,7 @@ SELECT*FROM
     duration = (SELECT MAX(duration)  FROM netflix_database )
 ```
 
-**Objective:** Find the movie with the longest duration.
-
+**Objective:** Find the movie with with the greatest screen time.
 ### 6. Find Content Added in the Last 5 Years
 
 ```sql
