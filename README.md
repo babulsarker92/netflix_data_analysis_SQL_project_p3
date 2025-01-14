@@ -113,17 +113,13 @@ SELECT*FROM
 
 **Objective:** Find the movie with with the greatest screen time.
 
-### Problem-6. Find All Movies/TV Shows by Director 'Rajiv Chilaka'
+### Problem-6. Retrieve a list of all movies and TV shows directed by 'Ben Simms'.
 
 ```sql
-SELECT *
-FROM (
-    SELECT 
-        *,
-        UNNEST(STRING_TO_ARRAY(director, ',')) AS director_name
-    FROM netflix
-) AS t
-WHERE director_name = 'Rajiv Chilaka';
+SELECT*
+FROM netflix_database
+WHERE 
+  director LIKE '%Ben Simms%'
 ```
 
 **Objective:** List all content directed by 'Rajiv Chilaka'.
