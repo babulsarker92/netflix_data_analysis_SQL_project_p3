@@ -122,7 +122,7 @@ WHERE
   director LIKE '%Ben Simms%'
 ```
 
-**Objective:** List all content directed by 'Rajiv Chilaka'.
+**Objective:** List all content directed by 'Ben Simms'.
 
 ### 8. List All TV Shows with More Than 5 Seasons
 
