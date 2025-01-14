@@ -113,7 +113,7 @@ SELECT*FROM
 
 **Objective:** Find the movie with with the greatest screen time.
 
-### 7. Find All Movies/TV Shows by Director 'Rajiv Chilaka'
+### Problem-6. Find All Movies/TV Shows by Director 'Rajiv Chilaka'
 
 ```sql
 SELECT *
