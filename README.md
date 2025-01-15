@@ -135,7 +135,7 @@ AND
 SPLIT_PART(duration,' ',1)::INT >10;  -- The result of SPLIT_PART is a string. The ::INT converts this string into an integer so it can be compared numerically.
 ```
 
-**Objective:** Identify TV shows with more than 5 seasons.
+**Objective:** Identify TV shows with more than 10 seasons.
 
 ### 9. Count the Number of Content Items in Each Genre
 
