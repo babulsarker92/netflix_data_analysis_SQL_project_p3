@@ -119,7 +119,7 @@ SELECT*FROM
 SELECT*
 FROM netflix_database
 WHERE 
-  director LIKE '%Ben Simms%'
+  director ILIKE '%Ben Simms%'
 ```
 
 **Objective:** List all content directed by 'Ben Simms'.
